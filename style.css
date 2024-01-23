@@ -153,7 +153,7 @@ a{
     }
 
     a{
-        width: 40vw;
+        width: 30vw;
         color: #73C2FB ;
         font-weight: bolder;
         cursor: pointer;
@@ -177,7 +177,7 @@ a{
     .cross{
         background-image: url(ccc.jpg);
         width: 35px;
-        height: 35px;
+        height: 30px;
         padding: 20px;
         margin-left: 75%;
         background: center;
