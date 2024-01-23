@@ -161,12 +161,13 @@ a{
 
     .ffff{
         width: 88%;
-        height: 4vh;
+        height: 5vh;
         margin-bottom: 20px;
     }
 
     .forgot{
         font-weight: bolder;
+        margin-left: 30%;
     }
 
     .facebook{
